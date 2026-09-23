@@ -11,6 +11,7 @@
     --elements-tx-second-color: #4F4F4F;
     --goldenrod-color: hsla(34, 86%, 67%, 1);
     
+    --error-color: #b3261e;
     --spacing: 30px;
 }
 
@@ -163,7 +164,7 @@ nav ul li a:hover {
     width: 34.5%;
     margin-top: 3.3em;
     margin-left: 2.5em;
-    background-image: url("/img/Ellipse\ 116.svg");
+    background-image: url("./img/Ellipse\ 116.svg");
     background-repeat: no-repeat;
     background-position: 40% 0;
 
@@ -779,8 +780,8 @@ nav ul li a:hover {
     margin-right: 6.5em;
 }
 
-.footer-section-d textarea {
-    height: 7.0625em;
+.footer-section-d input {
+    height: 3.5em;
 }
 
 .footer-section-d h2 {
@@ -791,18 +792,18 @@ nav ul li a:hover {
     margin-bottom: 13px;
 }
 
-.footer-section-d textarea {
+.footer-section-d input {
     border: none;
     padding:1em 2em; 
     width: 100%; 
 }
 
-.footer-section-d textarea::placeholder {
+.footer-section-d input::placeholder {
     color: var(--elements-tx-second-color);
     font-size: 0.875em;
 
 }
-.footer-section-d textarea:focus {
+.footer-section-d input:focus {
     outline-color: var(--elements-bg-color);
     color: var(--elements-bg-color);
 
@@ -1206,5 +1207,200 @@ nav ul li a:hover {
     /* Header */
     .logo {
         justify-content: center;
+    }
+}
+
+/* =========================================================
+   FIXES
+   ========================================================= */
+
+/* Text only for screen readers (was used in HTML but never defined) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--goldenrod-color);
+    outline-offset: 3px;
+}
+
+/* Register is now a link, keep the old button look */
+nav ul li a.reg-btn {
+    display: inline-block;
+    width: auto;
+    color: var(--bg-color);
+    font-size: 13px;
+}
+
+/* Hamburger is now a real button */
+.hamburger {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Review arrows */
+.f-section-top-left .button-container button {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Reviews scroll sideways, arrows move them */
+.f-section-bottom {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: auto;
+    padding: 1em 0.5em 1.5em;
+    scrollbar-width: thin;
+    scrollbar-color: var(--elements-bg-color) transparent;
+}
+
+.f-section-bottom-card {
+    height: 420px;
+    scroll-snap-align: start;
+}
+
+/* Decorative pink rectangle made the page scroll sideways */
+.d-section {
+    overflow-x: clip;
+}
+
+/* Newsletter form messages */
+.form-msg {
+    min-height: 1.5em;
+    margin: 0.5em 0 0;
+    font-weight: 600;
+}
+
+.form-msg.is-error {
+    color: var(--error-color);
+}
+
+.form-msg.is-success {
+    color: var(--elements-bg-color);
+}
+
+.footer-section-d input[aria-invalid="true"] {
+    outline: 2px solid var(--error-color);
+}
+
+@media screen and (max-width: 800px) {
+    .nav-links.active {
+        position: absolute;
+        top: 5em;
+        right: 1em;
+        z-index: 30;
+        margin: 0;
+        padding: 1em 1.5em;
+        gap: 1em;
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .f-section-bottom {
+        grid-template-columns: repeat(4, min(85vw, 360px));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Hero: picture below the text so it fits the screen */
+    .a-section {
+        flex-direction: column;
+    }
+
+    .hero {
+        width: auto;
+        margin: 0 1.5em;
+    }
+
+    .cool-svg {
+        width: auto;
+        margin: 1em auto 2em;
+    }
+
+    .cool-svg img {
+        height: 260px;
+    }
+
+    /* Accent card was wider than the screen */
+    .accent-card {
+        width: 100%;
+    }
+
+    .accent-card-top,
+    .accent-card-bottom {
+        width: auto;
+        margin-right: 0;
+        padding-right: 2em;
+    }
+
+    .accent-card-bottom .accent-card-bottom-btn {
+        height: auto;
+    }
+
+    /* Job title overlapped the name on narrow cards */
+    .f-section-bottom-card {
+        grid-template-columns: 110px 1fr;
+        padding: 2em 1.5em;
+    }
+
+    .f-section-bottom-card span {
+        font-size: 0.875em;
+    }
+
+    .f-section-bottom-card img {
+        max-width: 100%;
+        align-self: end;
+    }
+
+    /* Reviews heading touched the screen edge */
+    .f-section-top {
+        gap: 1em;
+        padding: 0 1em;
+    }
+
+    .f-section-bottom {
+        padding: 1em;
+    }
+
+    .f-section-top-left .button-container {
+        height: 48px;
+    }
+
+    .f-section-top-left .button-container button {
+        width: 48px;
+    }
+
+    .f-section-top-left .button-container button img {
+        padding: 1em;
+    }
+
+    /* Third card was cut off: now they scroll sideways */
+    .d-section-ctn {
+        width: auto;
+        margin-left: 0;
+        padding: 0 1em 3em;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .d-section-evcard {
+        flex: 0 0 75%;
+        scroll-snap-align: start;
     }
 }

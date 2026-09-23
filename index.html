@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta name="description" content="A brief description of the page content">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Template">
-    <meta name="author" content="Aldas">
-    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <title>Awesome UI — landing page</title>
+    <meta name="description" content="Awesome UI: a responsive landing page built with plain HTML, CSS and JavaScript.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, landing page, responsive design">
+    <link rel="icon" href="./img/A%20U.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,20 +23,20 @@
         <div class="page">
             <header>
                 <div class="logo">
-                    <img src="/img/A U.svg" alt="Styled letters">
+                    <img src="./img/A U.svg" alt="">
                     <h2>Awesome ui</h2>
                 </div>
                 <nav>
-                    <ul class="nav-links">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                        <li><a href="index.html">Store</a></li>
-                        <li><a href="services.html">Use cases</a></li>
-                        <button class="btn reg-btn">register</button>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#contact">Contact us</a></li>
+                        <li><a href="#services">Store</a></li>
+                        <li><a href="#testimonials">Use cases</a></li>
+                        <li><a class="btn reg-btn" href="#contact">register</a></li>
                     </ul>
-                    <div class="hamburger">
-                        <img src="/img/Icon.svg" alt="meniu">
-                    </div>
+                    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                        <img src="./img/Icon.svg" alt="">
+                    </button>
                 </nav>
             </header>
 
@@ -50,16 +49,16 @@
                             Tristique ullamcorper ac pharetra in nisi sit vivamus lorem. </p>
                         <button class="btn">
                             <span>Get started</span>
-                            <img src="/img/Vector.svg" alt="">
+                            <img src="./img/Vector.svg" alt="">
                         </button>
                     </div>
 
                     <div class="cool-svg">
-                        <img src="/img/Group 2574.svg" alt="Girl with a rocket playing tennis">
+                        <img src="./img/Group 2574.svg" alt="Girl with a rocket playing tennis">
                     </div>
                 </section>
                 <!-- B-SECTION -->
-                <section class="b-section">
+                <section class="b-section" id="about">
 
                     <div class="accent-card">
                         <div class="accent-card-top">
@@ -72,33 +71,33 @@
                                 velit sceleris</p>
                             <button class="btn accent-card-bottom-btn">
                                 <span>Get started</span>
-                                <img src="/img/Vector.svg" alt="">
+                                <img src="./img/Vector.svg" alt="">
                             </button>
                         </div>
                     </div>
 
                     <div class="cards-ctn">
-                        <div class="card" onmouseover="changeImage(this, '/img/smart-car-white.svg')"
-                            onmouseout="changeImage(this, '/img/smart-car.svg')">
-                            <img src="/img/smart-car.svg" alt="Car Rental">
+                        <div class="card" onmouseover="changeImage(this, './img/smart-car-white.svg')"
+                            onmouseout="changeImage(this, './img/smart-car.svg')">
+                            <img src="./img/smart-car.svg" alt="Car Rental">
                             <h3>Car Rental</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae </p>
                         </div>
-                        <div class="card" onmouseover="changeImage(this, '/img/ship-white.svg')"
-                            onmouseout="changeImage(this, '/img/ship.svg')">
-                            <img src="/img/ship.svg" alt="Boat Cruise">
+                        <div class="card" onmouseover="changeImage(this, './img/ship-white.svg')"
+                            onmouseout="changeImage(this, './img/ship.svg')">
+                            <img src="./img/ship.svg" alt="Boat Cruise">
                             <h3>Boat Cruise</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae </p>
                         </div>
-                        <div class="card" onmouseover="changeImage(this, '/img/bus-white.svg')"
-                            onmouseout="changeImage(this, '/img/bus.svg')">
-                            <img src="/img/bus.svg" alt="Bus Trip">
+                        <div class="card" onmouseover="changeImage(this, './img/bus-white.svg')"
+                            onmouseout="changeImage(this, './img/bus.svg')">
+                            <img src="./img/bus.svg" alt="Bus Trip">
                             <h3>Bus Trip</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae </p>
                         </div>
-                        <div class="card" onmouseover="changeImage(this, '/img/driving-white.svg')"
-                            onmouseout="changeImage(this, '/img/driving.svg')">
-                            <img src="/img/driving.svg" alt="Road Trip">
+                        <div class="card" onmouseover="changeImage(this, './img/driving-white.svg')"
+                            onmouseout="changeImage(this, './img/driving.svg')">
+                            <img src="./img/driving.svg" alt="Road Trip">
                             <h3>Road Trip</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae </p>
                         </div>
@@ -111,32 +110,32 @@
                 </section>
 
                 <!-- D-SECTION -->
-                <section class="d-section">
+                <section class="d-section" id="services">
                     <div class="d-section-ctn">
-                        <div class="d-section-evcard" onmouseover="changeImageD_s(this, '/img/python-white.svg')"
-                            onmouseout="changeImageD_s(this, '/img/python.svg')">
-                            <img src="/img/python.svg" />
+                        <div class="d-section-evcard" onmouseover="changeImage(this, './img/python-white.svg')"
+                            onmouseout="changeImage(this, './img/python.svg')">
+                            <img src="./img/python.svg" alt="" />
                             <h2><span>mot</span> consectet</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, ipsum.</p>
                             <div class="extra-img">
-                                <img src="/img/Dots 8px.1.png" alt="Extra Image" />
+                                <img src="./img/Dots 8px.1.png" alt="" />
                             </div>
                         </div>
 
-                        <div class="d-section-evcard" onmouseover="changeImageD_s(this, '/img/iost-white.svg')"
-                            onmouseout="changeImageD_s(this, '/img/iost.svg')">
-                            <img src="/img/iost.svg" />
+                        <div class="d-section-evcard" onmouseover="changeImage(this, './img/iost-white.svg')"
+                            onmouseout="changeImage(this, './img/iost.svg')">
+                            <img src="./img/iost.svg" alt="" />
                             <h2><span>mot</span> consectet</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, ipsum.</p>
                         </div>
 
-                        <div class="d-section-evcard" onmouseover="changeImageD_s(this, '/img/stacks-white.svg')"
-                            onmouseout="changeImageD_s(this, '/img/stacks.svg')">
-                            <img src="/img/stacks.svg" />
+                        <div class="d-section-evcard" onmouseover="changeImage(this, './img/stacks-white.svg')"
+                            onmouseout="changeImage(this, './img/stacks.svg')">
+                            <img src="./img/stacks.svg" alt="" />
                             <h2><span>mot</span> consectet</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, ipsum.</p>
                             <div class="extra-img extra-img-right">
-                                <img src="/img/Rectangle 497.png" alt="Extra Image" />
+                                <img src="./img/Rectangle 497.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -147,7 +146,7 @@
                     <div class="e-section-ctn">
 
                         <div class="e-section-img-ctn">
-                            <img src="/img/Group 2571.png" alt="">
+                            <img src="./img/Group 2571.png" alt="">
                         </div>
                         <div class="e-section-txt-ctn">
                             <small>MOT consectet</small>
@@ -157,7 +156,7 @@
                                 velit sceleris </p>
                             <button class="btn">
                                 <span>Get started</span>
-                                <img src="/img/Vector.svg" alt="">
+                                <img src="./img/Vector.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -165,7 +164,7 @@
                 </section>
 
                 <!-- F-SECTION  -->
-                <section class="f-section">
+                <section class="f-section" id="testimonials">
                     <div class="f-section-ctn">
                         <div class="f-section-top">
                             <div class="f-section-top-right">
@@ -174,14 +173,14 @@
                             </div>
                             <div class="f-section-top-left">
                                 <div class="button-container">
-                                    <button class="back" onmouseover="changeImageD_s(this, '/img/left-arrow-white.svg')"
-                                        onmouseout="changeImageD_s(this, '/img/left-arrow-green.svg')">
-                                        <img src="/img/left-arrow-green.svg" alt="Back">
+                                    <button class="back" type="button" aria-label="Previous review" data-slide="-1" onmouseover="changeImage(this, './img/left-arrow-white.svg')"
+                                        onmouseout="changeImage(this, './img/left-arrow-green.svg')">
+                                        <img src="./img/left-arrow-green.svg" alt="Back">
                                     </button>
-                                    <button class="forward"
-                                        onmouseover="changeImageD_s(this, '/img/right-arrow-white.svg')"
-                                        onmouseout="changeImageD_s(this, '/img/right-arrow-green.svg')">
-                                        <img src="/img/right-arrow-green.svg" alt="Forward">
+                                    <button class="forward" type="button" aria-label="Next review" data-slide="1"
+                                        onmouseover="changeImage(this, './img/right-arrow-white.svg')"
+                                        onmouseout="changeImage(this, './img/right-arrow-green.svg')">
+                                        <img src="./img/right-arrow-green.svg" alt="Forward">
                                     </button>
                                 </div>
                             </div>
@@ -189,28 +188,28 @@
 
                         <div class="f-section-bottom">
                             <div class="f-section-bottom-card">
-                                <img src="/img/leon-ell-f6HbVnGtNnY-unsplash-removebg-preview 1.png"
-                                    alt="Beutiful girl with skirt.">
+                                <img src="./img/leon-ell-f6HbVnGtNnY-unsplash-removebg-preview 1.png"
+                                    alt="Woman in a patterned skirt">
                                 <h3>Tayo Oshinuwa</h3>
                                 <span class="user-name">CTO May &amp; Baker</span>
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
                             </div>
                             <div class="f-section-bottom-card">
-                                <img src="/img/philip-martin-D6MmPV6SHqg-unsplash-removebg-preview 1.png"
-                                    alt="Black man with style..">
+                                <img src="./img/philip-martin-D6MmPV6SHqg-unsplash-removebg-preview 1.png"
+                                    alt="Man in a dark sweater and an orange beanie">
                                 <h3>Tayo Oshinuwa</h3>
                                 <span class="user-name">CTO May &amp; Baker</span>
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
                             </div>
                             <div class="f-section-bottom-card">
-                                <img src="/img/r.png" alt="Man looks like boss.">
+                                <img src="./img/r.png" alt="Man in a pink suit">
                                 <h3>Tayo Oshinuwa</h3>
                                 <span class="user-name">CTO May &amp; Baker</span>
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
                             </div>
                             <div class="f-section-bottom-card">
-                                <img src="/img/leon-ell-f6HbVnGtNnY-unsplash-removebg-preview 1.png"
-                                    alt="Beutiful girl with skirt.">
+                                <img src="./img/leon-ell-f6HbVnGtNnY-unsplash-removebg-preview 1.png"
+                                    alt="Woman in a patterned skirt">
                                 <h3>Tayo Oshinuwa</h3>
                                 <span class="user-name">CTO May &amp; Baker</span>
                                 <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
@@ -223,16 +222,16 @@
 
             </main>
 
-            <footer class="footer-section">
+            <footer class="footer-section" id="contact">
                 <div class="footer-ctn">
                     <!--Footer A -->
                     <div class="footer-section-a">
                         <div class="footer-logo">
-                            <img src="/img/A U.svg" alt="Styled letters">
-                            <h2>Awesomu UI</h2>
+                            <img src="./img/A U.svg" alt="">
+                            <h2>Awesome UI</h2>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit quidem debitis.</p>
-                        <p>Copyright &amp;copy; 2024 Awesome</p>
+                        <p>Copyright &copy; 2024 Awesome</p>
                         <p>All rights reserved</p>
                         <div class="social-icons">
                             <a href="#"><i class="fab fa-instagram"></i> <span class="sr-only">Instagram</span></a>
@@ -249,11 +248,11 @@
                         <div class="footer-section-b">
                             <h2>company</h2>
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="index.html">Store</a></li>
-                                <li><a href="services.html">Use Cases</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                                <li><a href="#services">Store</a></li>
+                                <li><a href="#testimonials">Use Cases</a></li>
+                                <li><a href="#contact">FAQ</a></li>
                             </ul>
                         </div>
 
@@ -261,23 +260,27 @@
                         <div class="footer-section-c">
                             <h2>Support</h2>
                             <ul>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="documentation.html">Documentation</a></li>
-                                <li><a href="support.html">Support</a></li>
-                                <li><a href="community.html">Community</a></li>
-                                <li><a href="partners.html">Partners</a></li>
+                                <li><a href="#contact">Blog</a></li>
+                                <li><a href="#contact">Documentation</a></li>
+                                <li><a href="#contact">Support</a></li>
+                                <li><a href="#contact">Community</a></li>
+                                <li><a href="#contact">Partners</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <!--Footer D -->
                     <div class="footer-section-d">
-                        <h2>send message</h2>
-                        <textarea placeholder="Your email address"></textarea>
-                        <button class="btn">
-                            <span>Send message</span>
-                            <img src="/img/Vector.svg" alt="">
-                        </button>
+                        <h2 id="newsletter-title">send message</h2>
+                        <form class="newsletter-form" novalidate aria-labelledby="newsletter-title">
+                            <label class="sr-only" for="email">Your email address</label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required aria-describedby="email-msg">
+                            <button class="btn" type="submit">
+                                <span>Send message</span>
+                                <img src="./img/Vector.svg" alt="">
+                            </button>
+                            <p class="form-msg" id="email-msg" aria-live="polite"></p>
+                        </form>
                     </div>
                 </div>
             </footer>
